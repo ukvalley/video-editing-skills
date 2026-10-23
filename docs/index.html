@@ -1,57 +1,66 @@
 <!doctype html>
 <!-- GitHub Pages landing page. Enable: repo Settings → Pages → Deploy from branch → main /docs.
-     Replace every {{PLACEHOLDER}}. Images load from profile/ on the main branch (one copy, used by README and this page). -->
+     Images load from profile/ on the main branch (one copy, shared with README.md). -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Video Editing Skills — {{YOUR_NAME}}</title>
-<meta name="description" content="14 open-source Claude Code skills for podcasts, reels, shorts, motion graphics, explainers, courses and ads — by {{YOUR_NAME}}.">
-<meta property="og:title" content="Video Editing Skills for Claude — {{YOUR_NAME}}">
-<meta property="og:image" content="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/social-preview.png">
+<title>Video Editing Skills — Umesh Khivasara</title>
+<meta name="description" content="14 open-source Claude Code skills for podcasts, reels, shorts, motion graphics, explainers, courses and ads, by Umesh Khivasara (Ukvalley Technologies, Growth Valley).">
+<meta property="og:title" content="Video Editing Skills for Claude Code, by Umesh Khivasara">
+<meta property="og:description" content="Turn Claude Code into a full video studio. Free and open source.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#0e0e12; --panel:#17171d; --ink:#f4f4f6; --mute:#a7a7b2; --line:#2a2a33; --accent:#FFC700; }
+  :root { --bg:#0b0b0f; --panel:#15151b; --ink:#f4f4f6; --mute:#a7a7b2; --line:#26262e; --accent:#FFC700; }
   @media (prefers-color-scheme: light) { :root { --bg:#fafaf7; --panel:#ffffff; --ink:#111114; --mute:#5b5b66; --line:#e6e6e0; } }
   * { box-sizing:border-box; margin:0; }
   body { background:var(--bg); color:var(--ink); font:500 17px/1.6 Montserrat, system-ui, sans-serif; }
   a { color:inherit; }
-  .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
-  header { padding:72px 0 48px; display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:center; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+  header { padding:64px 0 48px; display:grid; grid-template-columns:1.35fr 1fr; gap:44px; align-items:center; }
+  .kicker { font-weight:700; color:var(--accent); letter-spacing:.12em; font-size:13px; text-transform:uppercase; margin-bottom:14px; }
   h1 { font-weight:900; font-size:clamp(34px,6vw,60px); line-height:1.05; letter-spacing:-.02em; }
   h1 em { font-style:normal; background:var(--accent); color:#111; padding:0 .15em; }
   .lead { color:var(--mute); font-size:19px; margin:18px 0 28px; }
   .btns { display:flex; flex-wrap:wrap; gap:12px; }
   .btn { display:inline-block; padding:13px 22px; border-radius:10px; font-weight:700; text-decoration:none; border:2px solid var(--ink); }
   .btn.primary { background:var(--accent); color:#111; border-color:var(--accent); }
-  .hero-img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:20px; border:1px solid var(--line); background:var(--panel); }
-  section { padding:48px 0; border-top:1px solid var(--line); }
+  .hero-img { width:100%; aspect-ratio:4/5; object-fit:cover; object-position:top; border-radius:22px; border:1px solid var(--line); background:#000; }
+  section { padding:52px 0; border-top:1px solid var(--line); }
   h2 { font-weight:900; font-size:30px; margin-bottom:22px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
-  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; text-decoration:none; display:block; }
   .card h3 { font-size:17px; font-weight:900; margin-bottom:6px; }
   .card p { color:var(--mute); font-size:15px; }
-  .card img { height:48px; max-width:160px; object-fit:contain; margin-bottom:12px; }
-  .about { display:grid; grid-template-columns:220px 1fr; gap:28px; align-items:start; }
+  .card .logo { width:100%; border-radius:12px; margin-bottom:14px; display:block; }
+  .card .role { color:var(--accent); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px; }
+  .about { display:grid; grid-template-columns:240px 1fr; gap:32px; align-items:start; }
   .about img { width:100%; border-radius:16px; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-top:22px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px; }
+  .stat b { display:block; font-size:30px; font-weight:900; color:var(--accent); line-height:1.1; }
+  .stat span { color:var(--mute); font-size:14px; }
   pre { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; overflow-x:auto; font-size:14px; }
   footer { padding:40px 0 60px; color:var(--mute); font-size:14px; border-top:1px solid var(--line); }
-  @media (max-width:760px) { header, .about { grid-template-columns:1fr; } header { padding-top:40px; } .about img { max-width:220px; } }
+  @media (max-width:760px) { header, .about { grid-template-columns:1fr; } header { padding-top:36px; } .hero-img { max-width:360px; } .about img { max-width:220px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div>
+      <p class="kicker">Free · Open source · Apache-2.0</p>
       <h1>Turn Claude into a full <em>video studio</em>.</h1>
-      <p class="lead">14 open-source skills for podcasts, reels, shorts, motion graphics, product explainers, courses, YouTube and ad creatives — built and battle-tested by {{YOUR_NAME}}.</p>
+      <p class="lead">14 production-tested skills for podcasts, reels, shorts, motion graphics, product explainers, courses, YouTube and ad creatives, built by Umesh Khivasara and the team behind Ukvalley Technologies and Growth Valley.</p>
       <div class="btns">
-        <a class="btn primary" href="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}">⭐ Get the skills on GitHub</a>
-        <a class="btn" href="{{BOOKING_URL}}">Work with me</a>
+        <a class="btn primary" href="https://github.com/ukvalley/video-editing-skills">⭐ Get the skills on GitHub</a>
+        <a class="btn" href="https://www.growthvalley.online">Book a strategy call</a>
       </div>
     </div>
-    <img class="hero-img" src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/photos/headshot.jpg" alt="{{YOUR_NAME}}">
+    <img class="hero-img" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/photos/headshot.jpg" alt="Umesh Khivasara">
   </header>
 
   <section>
@@ -69,37 +78,49 @@
   <section>
     <h2>About me</h2>
     <div class="about">
-      <img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/photos/headshot.jpg" alt="{{YOUR_NAME}}">
+      <img src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/photos/headshot.jpg" alt="Umesh Khivasara">
       <div>
-        <p><b>{{YOUR_NAME}}</b> — {{ONE_LINE_TITLE}}</p>
-        <p class="lead" style="margin:10px 0 16px">{{SHORT_BIO_2_TO_4_SENTENCES}}</p>
+        <p><b>Umesh Khivasara</b><br>Founder & CEO, Ukvalley Technologies · Co-founder, Growthvalley LLP · MD, Yuva99 Recreation Pvt. Ltd. · Nashik, India</p>
+        <p class="lead" style="margin:12px 0 18px">I founded Ukvalley Technologies in 2017 to build technology and automation systems that solve real operational problems for businesses, and co-founded Growth Valley to help businesses build predictable customer-acquisition systems with performance marketing. These skills are the video pipeline we use in-house, open-sourced.</p>
         <div class="btns">
-          <a class="btn" href="{{LINKEDIN_URL}}">LinkedIn</a>
-          <a class="btn" href="{{INSTAGRAM_URL}}">Instagram</a>
-          <a class="btn" href="{{YOUTUBE_URL}}">YouTube</a>
-          <a class="btn" href="{{WEBSITE_URL}}">Website</a>
+          <a class="btn" href="https://www.linkedin.com/in/umesh-khivasara/">LinkedIn</a>
+          <a class="btn" href="https://ukvalley.com">ukvalley.com</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>200+</b><span>software projects delivered</span></div>
+          <div class="stat"><b>~5 → 30</b><span>team grown since 2017</span></div>
+          <div class="stat"><b>3</b><span>SaaS products launched</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>My companies</h2>
+    <h2>Companies</h2>
     <div class="grid">
-      <a class="card" href="https://growthvalley.online" style="text-decoration:none"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/growth-valley-white.png"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/growth-valley.png" alt="Growth Valley"></picture><h3>Growth Valley</h3><p>Don't just run ads. Build the system that converts them.</p></a>
-      <a class="card" href="{{COMPANY_2_URL}}" style="text-decoration:none"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/sales-mantra.png" alt="Sales Mantra"><h3>Sales Mantra</h3><p>{{COMPANY_2_ONE_LINER}}</p></a>
-      <a class="card" href="{{COMPANY_3_URL}}" style="text-decoration:none"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/ukvalley.png" alt="Ukvalley Technologies"><h3>Ukvalley Technologies</h3><p>Web and digital agency</p></a>
+      <a class="card" href="https://ukvalley.com"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/ukvalley.png" alt="Ukvalley Technologies"><p class="role">Founder & CEO</p><h3>Ukvalley Technologies</h3><p>Custom software, CRM, ERP and mobile apps.</p></a>
+      <a class="card" href="https://www.growthvalley.online"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/growth-valley.png" alt="Growth Valley"><p class="role">Co-founder</p><h3>Growth Valley</h3><p>Performance marketing and customer-acquisition systems, from ads to CRM to conversion.</p></a>
+      <a class="card" href="https://yuva99.in"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/yuva99.png" alt="Yuva99 Recreation"><p class="role">Managing Director</p><h3>Yuva99 Recreation Pvt. Ltd.</h3><p>Empower · Evolve · Excel.</p></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Products</h2>
+    <div class="grid">
+      <a class="card" href="https://televalley.in"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/televalley.png" alt="TeleValley"><h3>TeleValley</h3><p>Mobile-first SIM telecalling CRM: auto-dial, post-call updates, follow-ups, WhatsApp actions, manager dashboards.</p></a>
+      <a class="card" href="https://eventovalley.com"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/eventovalley.png" alt="EventoValley"><h3>EventoValley</h3><p>Event registration, QR check-in, online joining links, email and WhatsApp reminders, visitor management.</p></a>
+      <a class="card" href="https://erpvalley.in"><img class="logo" src="https://raw.githubusercontent.com/ukvalley/video-editing-skills/main/profile/logos/erpvalley.png" alt="ERPValley"><h3>ERPValley</h3><p>ERP implementation for SMEs and mid-market businesses: process mapping, migration, integrations, training and support.</p></a>
     </div>
   </section>
 
   <section>
     <h2>Install in 1 minute</h2>
-<pre>git clone https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}.git
-cd {{REPO_NAME}} && ./setup.sh</pre>
+<pre>git clone https://github.com/ukvalley/video-editing-skills.git
+cd video-editing-skills && ./setup.sh</pre>
     <p class="lead">Then open Claude Code in <code>~/video-editing</code> and say: <i>"New project from inbox: edit this podcast and cut 5 shorts."</i></p>
   </section>
 
-  <footer>Code: Apache-2.0 · Photos, logos and brand names © {{YOUR_NAME}}, all rights reserved · <a href="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}">GitHub</a></footer>
+  <footer>Code: Apache-2.0 · Photos, logos and brand names © Umesh Khivasara and respective companies, all rights reserved · <a href="https://github.com/ukvalley/video-editing-skills">GitHub</a></footer>
 </div>
 </body>
 </html>

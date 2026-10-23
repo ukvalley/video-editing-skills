@@ -6,8 +6,7 @@ Drop these files here (names are what README.md and docs/index.html expect):
 |---|---|---|
 | `photos/banner.jpg` | 1600x500 | top banner (you + tagline) |
 | `photos/headshot.jpg` | 600x600 | "Built by" section |
-| `logos/growth-valley.png` + `growth-valley-white.png` | added (dark ink + white for dark mode) | "My companies" table |
-| `logos/sales-mantra.png`, `logos/ukvalley.png` | transparent PNG, ~400 px wide (add `-white.png` versions too if the logo is dark) | "My companies" table |
+| `logos/*.png` | 600x220 white tiles (added) | Companies and Products tables |
 | `demo_podcast.gif`, `demo_reel.gif`, `demo_explainer.gif` | ≤ 5 MB each, ~520 px wide | demo row |
 | `social-preview.png` | 1280x640 | GitHub → Settings → Social preview (the image shown when the repo link is shared) |
 

@@ -1,10 +1,5 @@
-<!-- ============================================================
-     LANDING PAGE — replace every {{PLACEHOLDER}} and drop your images into profile/.
-     Search for "{{" to find them all.
-     ============================================================ -->
-
 <p align="center">
-  <img src="profile/photos/banner.jpg" alt="{{YOUR_NAME}} — video editing skills for Claude" width="100%">
+  <img src="profile/photos/banner.jpg" alt="Video Editing Skills for Claude Code — by Umesh Khivasara" width="100%">
 </p>
 
 <h1 align="center">Video Editing Skills for Claude</h1>
@@ -15,60 +10,61 @@
 </p>
 
 <p align="center">
-  <a href="{{WEBSITE_URL}}"><img src="https://img.shields.io/badge/Website-{{WEBSITE_LABEL}}-111111?style=for-the-badge" alt="Website"></a>
-  <a href="{{LINKEDIN_URL}}"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-  <a href="{{INSTAGRAM_URL}}"><img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-  <a href="{{YOUTUBE_URL}}"><img src="https://img.shields.io/badge/YouTube-Subscribe-FF0000?style=for-the-badge&logo=youtube" alt="YouTube"></a>
-  <a href="{{BOOKING_URL}}"><img src="https://img.shields.io/badge/Work_with_me-Book_a_call-FFC700?style=for-the-badge" alt="Book a call"></a>
+  <a href="https://www.linkedin.com/in/umesh-khivasara/"><img src="https://img.shields.io/badge/LinkedIn-Umesh_Khivasara-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
+  <a href="https://ukvalley.com"><img src="https://img.shields.io/badge/Website-ukvalley.com-111111?style=for-the-badge" alt="ukvalley.com"></a>
+  <a href="https://www.growthvalley.online"><img src="https://img.shields.io/badge/Growth_Valley-Book_a_strategy_call-FFC700?style=for-the-badge" alt="Book a strategy call"></a>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0"></a>
   <img src="https://img.shields.io/badge/Claude_Code-skills-D97757" alt="Claude Code skills">
   <img src="https://img.shields.io/badge/macOS-ffmpeg_·_Python-555" alt="macOS">
+  <a href="https://github.com/ukvalley/video-editing-skills/stargazers"><img src="https://img.shields.io/github/stars/ukvalley/video-editing-skills?style=social" alt="GitHub stars"></a>
 </p>
 
 ---
 
-## 👋 Built by {{YOUR_NAME}}
+## 👋 Built by Umesh Khivasara
 
 <table>
 <tr>
-<td width="220" valign="top"><img src="profile/photos/headshot.jpg" alt="{{YOUR_NAME}}" width="200"></td>
+<td width="220" valign="top"><img src="profile/photos/headshot.jpg" alt="Umesh Khivasara" width="200"></td>
 <td valign="top">
 
-**{{YOUR_NAME}}** — {{ONE_LINE_TITLE}}
+**Umesh Khivasara**<br>
+Founder & CEO, **Ukvalley Technologies** · Co-founder, **Growthvalley LLP** · MD, **Yuva99 Recreation Pvt. Ltd.**<br>
+📍 Nashik, Maharashtra, India
 
-{{SHORT_BIO_2_TO_4_SENTENCES — who you are, what you've built, who you help.}}
+I founded Ukvalley Technologies in 2017 to build technology and automation systems that solve real operational problems for businesses,
+and co-founded Growth Valley to help businesses build predictable customer-acquisition systems with performance marketing.
+These skills are the video pipeline we use in-house for product explainers, ads, podcasts, reels and courses, open-sourced so anyone can run it with Claude Code.
 
-- 🎬 {{PROOF_POINT_1 — e.g. "300+ videos edited for brands across India"}}
-- 🚀 {{PROOF_POINT_2}}
-- 🎤 {{PROOF_POINT_3}}
-
-📩 {{CONTACT_EMAIL_OR_WHATSAPP}}
+- 🛠 200+ software projects delivered across web, mobile, ERP, CRM, automation and custom business apps
+- 👥 Grew the team from around 5 people to about 30, serving clients in India and international markets
+- 🚀 Built and launched the TeleValley, EventoValley and ERPValley product ecosystem
+- 📈 Growth Valley covers the full funnel: strategy → ads → landing page → lead → CRM → follow-up → conversion → reporting
 
 </td>
 </tr>
 </table>
 
-## 🏢 My companies
+## 🏢 Companies
 
-| | Company | What we do |
-|---|---|---|
-| <picture><source media="(prefers-color-scheme: dark)" srcset="profile/logos/growth-valley-white.png"><img src="profile/logos/growth-valley.png" width="110" alt="Growth Valley"></picture> | **[Growth Valley](https://growthvalley.online)** | Don't just run ads. Build the system that converts them. |
-| <img src="profile/logos/sales-mantra.png" width="90" alt="Sales Mantra"> | **[Sales Mantra]({{COMPANY_2_URL}})** | {{COMPANY_2_ONE_LINER}} |
-| <img src="profile/logos/ukvalley.png" width="90" alt="Ukvalley Technologies"> | **[Ukvalley Technologies]({{COMPANY_3_URL}})** | Web and digital agency |
+| | | |
+|:---:|:---:|:---:|
+| [<img src="profile/logos/ukvalley.png" width="260" alt="Ukvalley Technologies">](https://ukvalley.com) | [<img src="profile/logos/growth-valley.png" width="260" alt="Growth Valley">](https://www.growthvalley.online) | [<img src="profile/logos/yuva99.png" width="260" alt="Yuva99 Recreation">](https://yuva99.in) |
+| **[Ukvalley Technologies](https://ukvalley.com)**<br>Custom software, CRM, ERP and mobile apps | **[Growth Valley](https://www.growthvalley.online)**<br>Performance marketing and customer-acquisition systems | **[Yuva99 Recreation Pvt. Ltd.](https://yuva99.in)**<br>Empower · Evolve · Excel |
 
-> Want these workflows done for you? **[Book a call]({{BOOKING_URL}})** — or star ⭐ the repo to follow updates.
+## 📦 Products
+
+| | | |
+|:---:|:---:|:---:|
+| [<img src="profile/logos/televalley.png" width="260" alt="TeleValley">](https://televalley.in) | [<img src="profile/logos/eventovalley.png" width="260" alt="EventoValley">](https://eventovalley.com) | [<img src="profile/logos/erpvalley.png" width="260" alt="ERPValley">](https://erpvalley.in) |
+| **[TeleValley](https://televalley.in)**<br>Mobile-first SIM telecalling CRM for sales teams | **[EventoValley](https://eventovalley.com)**<br>Event registration, QR check-in and visitor management | **[ERPValley](https://erpvalley.in)**<br>ERP implementation and business transformation for SMEs |
+
+> Want these workflows run for your business, or a product video like ours? **[Book a strategy call](https://www.growthvalley.online)** · or star ⭐ the repo to follow updates.
 
 ---
-
-## 🎥 What these skills make
-
-<!-- Put 3–6 short demo GIFs/MP4 thumbnails in profile/ and link them here. Showing output is what gets stars. -->
-| Podcast recut | Reel with motion graphics | Product explainer |
-|---|---|---|
-| <img src="profile/demo_podcast.gif" width="260" alt="Podcast demo"> | <img src="profile/demo_reel.gif" width="260" alt="Reel demo"> | <img src="profile/demo_explainer.gif" width="260" alt="Explainer demo"> |
 
 ## 🧰 The skills
 
@@ -95,8 +91,8 @@ Start every job with **`video-studio`** — it reads the request and routes it t
 Requirements: macOS, [Claude Code](https://claude.com/claude-code), Homebrew.
 
 ```bash
-git clone https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}.git
-cd {{REPO_NAME}}
+git clone https://github.com/ukvalley/video-editing-skills.git
+cd video-editing-skills
 ./setup.sh            # installs ffmpeg-full, numpy, pillow, whisper-cpp; links the skills; creates the studio
 ```
 
@@ -130,4 +126,4 @@ Issues and PRs are welcome — new skills, better SFX, fixes for other platforms
 Code and skills: [Apache-2.0](LICENSE) — free to use, modify and share, keeping the [NOTICE](NOTICE) attribution.
 Photos, logos and brand names in `profile/` are **not** covered by the license — see [BRAND-ASSETS.md](BRAND-ASSETS.md).
 
-<p align="center">Made with 🎬 by <a href="{{WEBSITE_URL}}">{{YOUR_NAME}}</a> · If this saved you hours, give it a ⭐</p>
+<p align="center">Made with 🎬 by <a href="https://www.linkedin.com/in/umesh-khivasara/">Umesh Khivasara</a> · If this saved you hours, give it a ⭐</p>
