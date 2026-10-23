@@ -55,9 +55,9 @@
 
 | | Company | What we do |
 |---|---|---|
-| <img src="profile/logos/company1.png" width="90" alt="{{COMPANY_1}}"> | **[{{COMPANY_1}}]({{COMPANY_1_URL}})** | {{COMPANY_1_ONE_LINER}} |
-| <img src="profile/logos/company2.png" width="90" alt="{{COMPANY_2}}"> | **[{{COMPANY_2}}]({{COMPANY_2_URL}})** | {{COMPANY_2_ONE_LINER}} |
-| <img src="profile/logos/company3.png" width="90" alt="{{COMPANY_3}}"> | **[{{COMPANY_3}}]({{COMPANY_3_URL}})** | {{COMPANY_3_ONE_LINER}} |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="profile/logos/growth-valley-white.png"><img src="profile/logos/growth-valley.png" width="110" alt="Growth Valley"></picture> | **[Growth Valley](https://growthvalley.online)** | Don't just run ads. Build the system that converts them. |
+| <img src="profile/logos/sales-mantra.png" width="90" alt="Sales Mantra"> | **[Sales Mantra]({{COMPANY_2_URL}})** | {{COMPANY_2_ONE_LINER}} |
+| <img src="profile/logos/ukvalley.png" width="90" alt="Ukvalley"> | **[Ukvalley]({{COMPANY_3_URL}})** | {{COMPANY_3_ONE_LINER}} |
 
 > Want these workflows done for you? **[Book a call]({{BOOKING_URL}})** — or star ⭐ the repo to follow updates.
 
