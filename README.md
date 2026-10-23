@@ -52,7 +52,7 @@ These skills are the video pipeline we use in-house for product explainers, ads,
 
 | | | |
 |:---:|:---:|:---:|
-| [<img src="profile/logos/ukvalley.png" width="260" alt="Ukvalley Technologies">](https://ukvalley.com) | [<img src="profile/logos/growth-valley.png" width="260" alt="Growth Valley">](https://www.growthvalley.online) | [<img src="profile/logos/yuva99.png" width="260" alt="Yuva99 Recreation">](https://yuva99.in) |
+| [<img src="profile/logos/ukvalley.png" width="260" alt="Ukvalley Technologies">](https://ukvalley.com) | [<img src="profile/logos/growthvalley.png" width="260" alt="Growth Valley">](https://www.growthvalley.online) | [<img src="profile/logos/yuva99.png" width="260" alt="Yuva99 Recreation">](https://yuva99.in) |
 | **[Ukvalley Technologies](https://ukvalley.com)**<br>Custom software, CRM, ERP and mobile apps | **[Growth Valley](https://www.growthvalley.online)**<br>Performance marketing and customer-acquisition systems | **[Yuva99 Recreation Pvt. Ltd.](https://yuva99.in)**<br>Empower · Evolve · Excel |
 
 ## 📦 Products
