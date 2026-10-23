@@ -57,7 +57,7 @@
 |---|---|---|
 | <picture><source media="(prefers-color-scheme: dark)" srcset="profile/logos/growth-valley-white.png"><img src="profile/logos/growth-valley.png" width="110" alt="Growth Valley"></picture> | **[Growth Valley](https://growthvalley.online)** | Don't just run ads. Build the system that converts them. |
 | <img src="profile/logos/sales-mantra.png" width="90" alt="Sales Mantra"> | **[Sales Mantra]({{COMPANY_2_URL}})** | {{COMPANY_2_ONE_LINER}} |
-| <img src="profile/logos/ukvalley.png" width="90" alt="Ukvalley"> | **[Ukvalley]({{COMPANY_3_URL}})** | {{COMPANY_3_ONE_LINER}} |
+| <img src="profile/logos/ukvalley.png" width="90" alt="Ukvalley Technologies"> | **[Ukvalley Technologies]({{COMPANY_3_URL}})** | Web and digital agency |
 
 > Want these workflows done for you? **[Book a call]({{BOOKING_URL}})** — or star ⭐ the repo to follow updates.
 
