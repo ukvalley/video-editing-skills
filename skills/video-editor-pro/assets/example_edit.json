@@ -1,0 +1,138 @@
+{
+ "output": {
+  "path": "out/final.mp4",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "crf": 20,
+  "loudness": "youtube"
+ },
+ "brand_color": "#FF6A00",
+ "clips": [
+  {
+   "src": "footage/a.mp4",
+   "in": 0.5,
+   "out": 2.5,
+   "zoom": [
+    1.0,
+    1.06
+   ]
+  },
+  {
+   "src": "footage/b.mp4",
+   "in": 0,
+   "out": 2.0,
+   "transition": "whip_left",
+   "transition_duration": 0.3,
+   "look": ""
+  },
+  {
+   "src": "footage/c.mp4",
+   "in": 0,
+   "out": 2.0,
+   "transition": "zoom_punch",
+   "speed": [
+    [
+     0,
+     1.0
+    ],
+    [
+     0.6,
+     0.4
+    ],
+    [
+     1.2,
+     1.0
+    ]
+   ]
+  },
+  {
+   "src": "footage/a.mp4",
+   "in": 3,
+   "out": 5,
+   "transition": "flash",
+   "freeze": {
+    "at": 1.0,
+    "duration": 0.6
+   },
+   "filters": "hue=s=0.7"
+  },
+  {
+   "src": "footage/b.mp4",
+   "in": 2,
+   "transition": "glitch",
+   "speed": 2.0,
+   "mute": true
+  }
+ ],
+ "music": {
+  "file": "music/track.wav",
+  "start": 0.0,
+  "gain_db": -8,
+  "duck": true,
+  "fade_out": 1.0
+ },
+ "voiceover": {
+  "file": "vo/voiceover.wav",
+  "at": 0.5,
+  "gain_db": -6
+ },
+ "sfx": [
+  {
+   "file": "sfx/impact.wav",
+   "at": 0.2,
+   "gain_db": -4
+  }
+ ],
+ "auto_sfx": {
+  "whoosh": "sfx/whoosh.wav",
+  "impact": "sfx/impact.wav",
+  "flash": "sfx/ping.wav",
+  "glitch": "sfx/glitch.wav"
+ },
+ "text": [
+  {
+   "text": "3 EDITING MISTAKES",
+   "at": 0.2,
+   "duration": 2.0,
+   "size": 100,
+   "position": "top",
+   "anim": "slide_up",
+   "box": true
+  },
+  {
+   "text": "it's about: rhythm, 100%",
+   "at": 2.5,
+   "duration": 2.0,
+   "position": "center",
+   "anim": "pop",
+   "stroke": 3
+  }
+ ],
+ "lower_thirds": [
+  {
+   "name": "Your Name",
+   "role": "Founder, Your Company",
+   "at": 4.0,
+   "duration": 3.0
+  }
+ ],
+ "images": [
+  {
+   "file": "brand/logo.png",
+   "at": 0,
+   "duration": 0,
+   "x": "W-w-40",
+   "y": "40",
+   "scale": 0.1,
+   "opacity": 0.7
+  }
+ ],
+ "progress_bar": {
+  "height": 10
+ },
+ "look": "teal_orange",
+ "grain": 6,
+ "vignette": 0.3,
+ "_comment": "Example EDL covering most features. Paths are relative to this file; replace with your footage. Render: python3 scripts/edl_render.py edit.json --preview"
+}

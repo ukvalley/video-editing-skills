@@ -1,0 +1,105 @@
+<!doctype html>
+<!-- GitHub Pages landing page. Enable: repo Settings → Pages → Deploy from branch → main /docs.
+     Replace every {{PLACEHOLDER}}. Images load from profile/ on the main branch (one copy, used by README and this page). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Editing Skills — {{YOUR_NAME}}</title>
+<meta name="description" content="14 open-source Claude Code skills for podcasts, reels, shorts, motion graphics, explainers, courses and ads — by {{YOUR_NAME}}.">
+<meta property="og:title" content="Video Editing Skills for Claude — {{YOUR_NAME}}">
+<meta property="og:image" content="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/social-preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0e0e12; --panel:#17171d; --ink:#f4f4f6; --mute:#a7a7b2; --line:#2a2a33; --accent:#FFC700; }
+  @media (prefers-color-scheme: light) { :root { --bg:#fafaf7; --panel:#ffffff; --ink:#111114; --mute:#5b5b66; --line:#e6e6e0; } }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font:500 17px/1.6 Montserrat, system-ui, sans-serif; }
+  a { color:inherit; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
+  header { padding:72px 0 48px; display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:center; }
+  h1 { font-weight:900; font-size:clamp(34px,6vw,60px); line-height:1.05; letter-spacing:-.02em; }
+  h1 em { font-style:normal; background:var(--accent); color:#111; padding:0 .15em; }
+  .lead { color:var(--mute); font-size:19px; margin:18px 0 28px; }
+  .btns { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn { display:inline-block; padding:13px 22px; border-radius:10px; font-weight:700; text-decoration:none; border:2px solid var(--ink); }
+  .btn.primary { background:var(--accent); color:#111; border-color:var(--accent); }
+  .hero-img { width:100%; aspect-ratio:1; object-fit:cover; border-radius:20px; border:1px solid var(--line); background:var(--panel); }
+  section { padding:48px 0; border-top:1px solid var(--line); }
+  h2 { font-weight:900; font-size:30px; margin-bottom:22px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; }
+  .card h3 { font-size:17px; font-weight:900; margin-bottom:6px; }
+  .card p { color:var(--mute); font-size:15px; }
+  .card img { height:48px; max-width:160px; object-fit:contain; margin-bottom:12px; }
+  .about { display:grid; grid-template-columns:220px 1fr; gap:28px; align-items:start; }
+  .about img { width:100%; border-radius:16px; }
+  pre { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; overflow-x:auto; font-size:14px; }
+  footer { padding:40px 0 60px; color:var(--mute); font-size:14px; border-top:1px solid var(--line); }
+  @media (max-width:760px) { header, .about { grid-template-columns:1fr; } header { padding-top:40px; } .about img { max-width:220px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Turn Claude into a full <em>video studio</em>.</h1>
+      <p class="lead">14 open-source skills for podcasts, reels, shorts, motion graphics, product explainers, courses, YouTube and ad creatives — built and battle-tested by {{YOUR_NAME}}.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}">⭐ Get the skills on GitHub</a>
+        <a class="btn" href="{{BOOKING_URL}}">Work with me</a>
+      </div>
+    </div>
+    <img class="hero-img" src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/photos/headshot.jpg" alt="{{YOUR_NAME}}">
+  </header>
+
+  <section>
+    <h2>What's inside</h2>
+    <div class="grid">
+      <div class="card"><h3>Podcast editor</h3><p>Voice isolation, automatic filler and false-start cuts, auto multicam, cold open, chapters.</p></div>
+      <div class="card"><h3>Long → shorts</h3><p>Transcript-scored viral clips, face-follow 9:16 reframing, karaoke captions, hook titles.</p></div>
+      <div class="card"><h3>Talking-head reels</h3><p>Retake removal, tight pacing, word-synced graphics, layered SFX, premium grade.</p></div>
+      <div class="card"><h3>Motion graphics</h3><p>Logo stings, kinetic type, animated data, lower-third and overlay packs.</p></div>
+      <div class="card"><h3>Product explainers & ads</h3><p>SaaS explainers and 30 s ads with AI voice-over, multi-language, YouTube / Reels / TV.</p></div>
+      <div class="card"><h3>Courses, YouTube, ad variants, thumbnails</h3><p>Slides → lessons, screen-recording tutorials, hook × body × CTA ad matrices, A/B thumbnails.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>About me</h2>
+    <div class="about">
+      <img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/photos/headshot.jpg" alt="{{YOUR_NAME}}">
+      <div>
+        <p><b>{{YOUR_NAME}}</b> — {{ONE_LINE_TITLE}}</p>
+        <p class="lead" style="margin:10px 0 16px">{{SHORT_BIO_2_TO_4_SENTENCES}}</p>
+        <div class="btns">
+          <a class="btn" href="{{LINKEDIN_URL}}">LinkedIn</a>
+          <a class="btn" href="{{INSTAGRAM_URL}}">Instagram</a>
+          <a class="btn" href="{{YOUTUBE_URL}}">YouTube</a>
+          <a class="btn" href="{{WEBSITE_URL}}">Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>My companies</h2>
+    <div class="grid">
+      <a class="card" href="{{COMPANY_1_URL}}" style="text-decoration:none"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/company1.png" alt="{{COMPANY_1}}"><h3>{{COMPANY_1}}</h3><p>{{COMPANY_1_ONE_LINER}}</p></a>
+      <a class="card" href="{{COMPANY_2_URL}}" style="text-decoration:none"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/company2.png" alt="{{COMPANY_2}}"><h3>{{COMPANY_2}}</h3><p>{{COMPANY_2_ONE_LINER}}</p></a>
+      <a class="card" href="{{COMPANY_3_URL}}" style="text-decoration:none"><img src="https://raw.githubusercontent.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}/main/profile/logos/company3.png" alt="{{COMPANY_3}}"><h3>{{COMPANY_3}}</h3><p>{{COMPANY_3_ONE_LINER}}</p></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Install in 1 minute</h2>
+<pre>git clone https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}.git
+cd {{REPO_NAME}} && ./setup.sh</pre>
+    <p class="lead">Then open Claude Code in <code>~/video-editing</code> and say: <i>"New project from inbox: edit this podcast and cut 5 shorts."</i></p>
+  </section>
+
+  <footer>Code: Apache-2.0 · Photos, logos and brand names © {{YOUR_NAME}}, all rights reserved · <a href="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}">GitHub</a></footer>
+</div>
+</body>
+</html>

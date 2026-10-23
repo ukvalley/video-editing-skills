@@ -1,0 +1,10 @@
+{
+  "kind": "explainer",
+  "brand": "assets/brand/acme",
+  "music": "assets/music/tech_underscore_105bpm_170s.wav",
+  "bpm": 105,
+  "drums_from": 4.6,
+  "music_db": -17,
+  "music_fade": [1.5, 3.5],
+  "duck": [0.04, 5, 20, 350]
+}

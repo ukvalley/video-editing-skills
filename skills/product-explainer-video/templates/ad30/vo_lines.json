@@ -1,0 +1,222 @@
+{
+ "lang": "en",
+ "note": "TEMPLATE 30 s ad - PAS in the first ~7 s (hook title slam -> 3 pains -> logo on the music drop), fast feature burst, CTA. total = 30.0 pads the end card to exactly 30.00 s; make_vo fails if the VO runs over (cut words or raise speed to 1.12).",
+ "voice": {
+  "eleven_id": "siw1N9V8LmYeEWKyWBxv",
+  "eleven_model": "eleven_multilingual_v2",
+  "say_voice": "Rishi",
+  "say_rate": 185,
+  "speed": 1.1,
+  "settings": {
+   "stability": 0.45,
+   "style": 0.35
+  }
+ },
+ "pronounce": {
+  "Acme": "Ack me"
+ },
+ "gap": 0.14,
+ "total": 30.0,
+ "titles": {
+  "early_cta": "Book a free demo  →  acme.com"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "hook",
+   "pre": 0.25,
+   "post": 0.08,
+   "show": {
+    "icon": "📞",
+    "title": "MISSED FOLLOW-UPS",
+    "sub": "=  LOST DEALS"
+   },
+   "lines": [
+    "Missed follow-ups are costing you deals."
+   ]
+  },
+  {
+   "id": "agitate",
+   "type": "pains",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "items": [
+     [
+      "📊",
+      "Leads stuck in spreadsheets"
+     ],
+     [
+      "🎙️",
+      "No call recordings"
+     ],
+     [
+      "👀",
+      "No idea who's calling"
+     ]
+    ]
+   },
+   "lines": [
+    "Leads stuck in spreadsheets.",
+    "No call recordings.",
+    "No idea who's calling."
+   ]
+  },
+  {
+   "id": "reveal",
+   "type": "reveal",
+   "pre": 0.3,
+   "post": 0.2,
+   "show": {
+    "sub": "The all-in-one sales workspace"
+   },
+   "lines": [
+    "Meet Acme, the all-in-one sales workspace."
+   ]
+  },
+  {
+   "id": "dashboard",
+   "type": "feature",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "title": "Live dashboard for managers",
+    "shot": "web_dashboard.png",
+    "frame": "browser",
+    "side": "right",
+    "pills": [
+     [
+      "📈",
+      "Live numbers"
+     ],
+     [
+      "🏆",
+      "Leaderboard"
+     ]
+    ]
+   },
+   "lines": [
+    "Managers see every number live."
+   ]
+  },
+  {
+   "id": "mobile",
+   "type": "feature",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "title": "One app for the whole team",
+    "shot": "phone_home.png",
+    "frame": "phone",
+    "side": "left",
+    "pills": [
+     [
+      "✅",
+      "Check in"
+     ],
+     [
+      "🎯",
+      "Targets"
+     ],
+     [
+      "💬",
+      "WhatsApp"
+     ]
+    ]
+   },
+   "lines": [
+    "Your team gets one simple app."
+   ]
+  },
+  {
+   "id": "followup",
+   "type": "feature",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "title": "No follow-up missed",
+    "shot": "phone_home.png",
+    "frame": "phone",
+    "side": "right",
+    "pills": [
+     [
+      "🔔",
+      "Reminder: call Amit"
+     ],
+     [
+      "✅",
+      "Done"
+     ]
+    ]
+   },
+   "lines": [
+    "Smart reminders make sure no follow-up is ever missed."
+   ]
+  },
+  {
+   "id": "how",
+   "type": "steps",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "title": "Import. Call. Close.",
+    "items": [
+     [
+      "📥",
+      "Import",
+      "in minutes"
+     ],
+     [
+      "📞",
+      "Call",
+      "one tap"
+     ],
+     [
+      "🏁",
+      "Close",
+      "more deals"
+     ]
+    ]
+   },
+   "lines": [
+    "Import your leads, call in one tap,",
+    "and close more deals."
+   ]
+  },
+  {
+   "id": "results",
+   "type": "stats",
+   "pre": 0.05,
+   "post": 0.1,
+   "show": {
+    "title": "Real results",
+    "items": [
+     [
+      "3x",
+      "more calls"
+     ],
+     [
+      "92%",
+      "follow-ups on time"
+     ]
+    ]
+   },
+   "lines": [
+    "Three times more calls, and follow-ups on time."
+   ]
+  },
+  {
+   "id": "cta",
+   "type": "cta",
+   "pre": 0.15,
+   "post": 0.4,
+   "show": {
+    "button": "Book a Free Demo",
+    "tap": "demo"
+   },
+   "lines": [
+    "Book your free demo at acme dot com."
+   ]
+  }
+ ]
+}

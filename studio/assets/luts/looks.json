@@ -1,0 +1,13 @@
+{
+ "warm_clean": {
+  "used_in": "talking-head reels",
+  "notes": "Indoor office, DJI Rec.709. Warmer skin, S-curve contrast, gentle vibrance, delivery sharpen. Add vignette 0.25 on top.",
+  "filter": "colortemperature=temperature=6000:mix=0.45,curves=master='0/0 0.22/0.19 0.5/0.52 0.8/0.84 1/1',vibrance=intensity=0.18,eq=saturation=1.04,colorbalance=rm=0.015:gm=0.0:bm=-0.015,unsharp=5:5:0.45:5:5:0"
+ },
+ "premium_cinematic": {
+  "used_in": "2026-10-06_performance-marketing-ecosystem",
+  "notes": "Premium look for the office set: rolled-off highlights (white wall stops glaring), richer blacks, cool shadows + warm skin, restrained saturation. Apply 'grade' in the base EDL, then 'finish' in the composite pass (needs depth mask input) BEFORE graphics/text.",
+  "grade": "curves=master='0/0.03 0.15/0.09 0.5/0.47 0.8/0.76 1/0.9',colorbalance=rs=-0.04:bs=0.07:rh=0.05:rm=0.01:bh=-0.05,eq=saturation=0.88:contrast=1.08,vibrance=intensity=0.2",
+  "finish": "edge depth blur sigma 10 through assets/luts/depth_mask_1080x1920.png (maskedmerge in gbrp), halation = highlights (curves 0.75\u21920) blurred sigma 22 screen-blended at 0.18, vignette angle 0.42, grain alls=4 temporal, unsharp 0.35"
+ }
+}

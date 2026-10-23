@@ -1,0 +1,11 @@
+{
+  "kind": "ad",
+  "brand": "assets/brand/acme",
+  "music": "assets/music/hype_120bpm.wav",
+  "music_drop": 16.0,
+  "beat": 0.5,
+  "bpm": 120,
+  "music_db": -13,
+  "music_fade": [0.3, 0.8],
+  "duck": [0.05, 4, 15, 250]
+}

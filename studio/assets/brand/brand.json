@@ -1,0 +1,66 @@
+{
+  "name": "Your Brand",
+  "note": "Studio-wide defaults for talking-head reels. Replace the name, colours and logo with your brand.",
+  "colors": {
+    "accent_yellow": "#FFC400",
+    "navy": "#0E163A",
+    "purple": "#3428AA",
+    "green": "#2ECC71",
+    "red": "#EB4034",
+    "white": "#FFFFFF"
+  },
+  "fonts": {
+    "titles": "assets/fonts/Montserrat-Black.ttf",
+    "body": "assets/fonts/Montserrat-ExtraBold.ttf",
+    "captions_name": "Montserrat Black"
+  },
+  "captions": {
+    "style": "karaoke",
+    "size": 100,
+    "words_per_line": 3,
+    "position": 0.7,
+    "uppercase": true,
+    "highlight_ass": "&H0000C4FF",
+    "language": "Hinglish in Roman script (transcribe with whisper -l hi, then romanise)"
+  },
+  "titles": {
+    "y": "h*0.16",
+    "box_color": "0x0E163A@0.88",
+    "line1": {
+      "size": 120,
+      "color": "white"
+    },
+    "line2": {
+      "size": 84,
+      "color": "0xFFC400"
+    }
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "crf": 16,
+    "x264": "-tune film -x264-params aq-mode=3:deblock=-1,-1"
+  },
+  "audio": {
+    "loudness_lufs": -14,
+    "true_peak_db": -1,
+    "dialogue_chain": "highpass=f=80,afftdn=nf=-30:nr=8,acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2",
+    "sfx_boost_db": 6,
+    "transition_sfx_extra_db": 3
+  },
+  "look": "warm_clean",
+  "vignette": 0.25,
+  "zoom_alternation": [
+    [
+      1.0,
+      1.04
+    ],
+    [
+      1.13,
+      1.16
+    ]
+  ],
+  "logo": "assets/brand/logo.png",
+  "logo_src": "assets/brand/logo_src.png (small logos: rebuild crisp with toolkit/upscale_logo.py)"
+}

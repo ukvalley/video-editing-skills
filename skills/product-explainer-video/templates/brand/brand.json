@@ -1,0 +1,12 @@
+{
+  "name": "Acme",
+  "tagline": "Replace with the brand's tagline",
+  "note": "Template: copy to assets/brand/<company>/brand.json. Colours are the logo's gradient pair (a -> b); ink/mute are text colours. Logos/screenshots live next to this file. Region keys match TV_LANG (en, hi, ca, ...).",
+  "colors": {"a": "#0F9D8A", "b": "#2563EB", "ink": "#121A2E", "mute": "#5F6B85", "accent3": "#F59E0B"},
+  "logos": {"mark": "logo_mark.png", "word": "logo_word.png", "full": "logo_full.png"},
+  "regions": {
+    "en": {"web": "www.acme.com"},
+    "hi": {"web": "www.acme.in"},
+    "ca": {"web": "www.acme.ca", "app_url": "app.acme.ca", "strip_bar": false}
+  }
+}
