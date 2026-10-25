@@ -37,6 +37,10 @@ A job can chain skills: podcast → `podcast-editor` → `long-to-shorts` → `t
 - `export PATH=/opt/homebrew/opt/ffmpeg-full/bin:$PATH` before every ffmpeg call (drawtext/libass). ffmpeg 9: `-fps_mode`, not `-vsync`.
   pip is blocked (PEP 668) — brew only; numpy + Pillow are installed, OpenCV/scipy/requests are not (the scripts here avoid them).
 - **Heavy renders:** `taskpolicy -b nice -n 19 <cmd>` with `run_in_background`, one job at a time — the laptop hangs otherwise.
+- **Fast mode:** only when the user says the laptop is free (e.g. "not in use for 4 hours"): skip taskpolicy and render
+  pieces in parallel for that session. Back to low priority by default next time.
+- **A/V check:** every assembled base must have video duration == audio duration (keep_render.py checks and stops).
+  Conform odd frame rates (29.97/59.94) with `fps=25` as the first filter and exact frame counts per piece.
 - **Stage gates:** brief → script/cut plan → (paid VO / isolation) → low-res preview → user approval → full render → master → QC.
   Never spend ElevenLabs credits or do the full-res render before the user approves the stage before it, unless they waive the gates.
 - **Look before you send:** stills/contact sheet of every deliverable at full res (clipped text, overlaps, safe zones, faces under titles).
@@ -61,3 +65,16 @@ A job can chain skills: podcast → `podcast-editor` → `long-to-shorts` → `t
 Voices (ElevenLabs): Ruhaan `siw1N9V8LmYeEWKyWBxv` (default, explainers), Prem `05QRrdNgiglhuYOaTQvw` (courses, speed 1.05),
 Saavi `H8bdWZHK2OgZwTN7ponr` (Hinglish female, ads), Viraj `bajNon13EdhNMndG3z05`. Output format `mp3_44100_128` (Starter plan).
 Free local transcription: `whisper-cli -m ~/.cache/whisper-cpp/ggml-medium.bin -l hi` (hides disfluencies; drifts — transcribe per speech region).
+
+## 4. Publishing (YouTube / LinkedIn through the user's browser)
+- Only with the user's explicit request, and **never click Publish / Post without their OK in chat** — fill everything, then stop.
+- The browser tool can't attach files over 10 MB: open the upload dialog, reveal the export in Finder, and the user drags it in
+  (one file per drag). Never press Escape in YouTube's upload dialog (it closes it).
+- YouTube details: title (keyword first, #shorts for Shorts), description (links, chapters for long-form), tags, language,
+  category, "not made for kids", AI disclosure (real footage of the person saying their own words + background music = No),
+  thumbnail (long-form), then Visibility. Channels with memberships list "Members only" ABOVE "Public": click Public by
+  position and confirm with a screenshot.
+- Shorts: "Related video" only lists PUBLIC videos, so publish the full episode first, then link each Short to it.
+  Daily release = upload all as Private with SEO done.
+- Posting kit per video in `edit/posting_kit.md` (Instagram caption + hashtags + alt text + comment-to-DM keyword,
+  YouTube title/description/tags, LinkedIn text). Links in Shorts descriptions aren't clickable: pin a comment.

@@ -31,3 +31,12 @@
 - Short overlay clips placed late with `-itsoffset` (or `setpts=PTS+X/TB`) were silently dropped by overlay framesync → pad overlays from t=0 with `tpad=start=<frames>:color=black@0` and rebase all streams with `settb=1/30,setpts=N`.
 - Seek-sample (`-ss`) for contact sheets of concatenated bases; `select=eq(n,..)` / `fps=1` sheets were unreliable on them.
 - Music-only aftermovies: original track via `toolkit/make_hype_track.py` (build + drops, markers JSON); crowd ambience via `toolkit/make_sfx_crowd.py`.
+
+## Added from podcast recuts and the launch reel
+- 29.97/59.94 sources: `fps=25` FIRST in each piece's filter + exact `-frames:v n`; pad/trim audio to n/fps. Converting after
+  the trim added frames per piece and drifted 27 s over 14 min. Always compare video vs audio duration of the assembled base.
+- Container `duration` lies after concatenating hardware-encoded (videotoolbox) pieces (~12 ms per piece): count packets
+  (`ffprobe -count_packets … nb_read_packets`) to measure real video length.
+- DJI / iPhone files repeat the video stream inside a stream group: take the FIRST line of ffprobe csv output.
+- `qc.py --lufs -11` for deliberate talking-head masters; `--tp -2.2` keeps AAC under −1 dBTP at −11 LUFS.
+- Burned-in text in someone else's master: `podcast-editor/scripts/detect_baked.py` (yellow + dark-gradient modes); re-run on the final.

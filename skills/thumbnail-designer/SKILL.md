@@ -24,3 +24,9 @@ python3 $T --src raw/a.mp4 --at 41.2 --title "STOP LOSING *LEADS*" --format cove
 - Consistent series look per channel/client (same font, accent, logo placement).
 - Look at the output at full size and at 160 px before delivering. For a custom composition (product shots, before/after split, arrows,
   cut-out subject) extend the script per project in `edit/thumbnails.py` rather than changing the shared one.
+
+## Podcast episode thumbnail (proven layout)
+Guest close-up on the right with a strong expression (hand on head, pointing, laugh), a dark panel fading in from the left
+with a 3–5 word hook in Anton/Montserrat Black (one gold word or a gold label box), a soft warm glow behind the text.
+Never reuse the previous episode's hook wording. Build it per project in `edit/thumbnail.py` when the generic script's
+layout doesn't fit.

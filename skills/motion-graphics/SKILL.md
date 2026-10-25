@@ -28,6 +28,8 @@ node 22 is installed) when the user asks for it or the piece is HTML/CSS-native 
 - **Hierarchy:** one hero element per moment; max 2 typefaces (Montserrat Black/ExtraBold, Anton for numbers, Caveat for handwritten notes,
   Noto Sans Devanagari for Hindi); 1 accent colour per frame (e.g. brand yellow `#FFC700`).
 - **Readable time:** on-screen text stays ≥ (words × 0.3 s + 0.5 s). Text inside the title-safe 90 % (16:9) or y 260–1100 (9:16 with UI).
+- **Missing glyphs:** Montserrat/Anton have no ★ ✕ ✓ ▍ ↓ and no emoji; they render as empty boxes. Draw them
+  (polygon star, two lines for ✕, rectangle cursor) or check `font.getmask(ch).getbbox()` before using a symbol.
 - **Layout from measured widths** (`text().width`), and shrink to fit — never fixed x steps (words overlap at other lengths/languages).
 - **Depth & life:** subtle background drift/parallax, grain 2–4 %, light sweep across logos, motion-blur-like smear on fast moves
   (draw 3–5 ghost copies at decreasing alpha), shadows only if the brand allows (a flat paper look: no shadows/gradients).

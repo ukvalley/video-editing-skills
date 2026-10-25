@@ -32,7 +32,7 @@ def ff(args, quiet=True):
 def probe_size(path):
     o = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
                         "-of", "csv=p=0", path], capture_output=True, text=True).stdout.strip()
-    w, h = o.split(",")[:2]
+    w, h = o.splitlines()[0].split(",")[:2]  # DJI/iPhone files repeat the stream inside a stream group
     return int(w), int(h)
 
 
@@ -77,7 +77,8 @@ def main():
         src = s.get("src", K["src"])
         sizes.setdefault(src, probe_size(src))
         sw, sh = sizes[src]
-        d = s["out"] - s["in"]
+        n = max(1, round((s["out"] - s["in"]) * a.fps))   # whole frames: every piece is exactly n/fps long
+        d = n / a.fps
         x, y, cw, ch = s.get("crop", [0, 0, sw, sh])
         z = s.get("zoom", 1.0)
         if z != 1.0:
@@ -90,24 +91,33 @@ def main():
         else:
             nh = cw / ar; y += (ch - nh) / 2; ch = nh
         x, y = max(0, min(sw - cw, x)), max(0, min(sh - ch, y))
-        vf = (f"crop={int(cw)//2*2}:{int(ch)//2*2}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos,"
-              f"fps={a.fps},format=yuv420p,setsar=1")
-        af = f"afade=t=in:d={FADE},afade=t=out:st={max(0, d - FADE):.4f}:d={FADE},aresample=48000"
+        # fps FIRST: converting 29.97/59.94 sources after the trim added 1-3 frames per piece and the picture drifted
+        # 27 s behind the audio over a 14-min podcast. Video is cut to exactly n frames, audio padded/trimmed to n/fps.
+        vf = (f"fps={a.fps},crop={int(cw)//2*2}:{int(ch)//2*2}:{int(x)}:{int(y)},scale={W}:{H}:flags=lanczos,"
+              f"format=yuv420p,setsar=1")
+        af = (f"aresample=48000,apad,atrim=0:{d:.6f},afade=t=in:d={FADE},"
+              f"afade=t=out:st={max(0, d - FADE):.6f}:d={FADE}")
         part = os.path.join(a.work, f"k{i:04d}.mov")
-        inputs = ["-ss", f"{s['in']:.4f}", "-t", f"{d:.4f}", "-i", src]
+        inputs = ["-ss", f"{s['in']:.4f}", "-t", f"{d + 0.2:.4f}", "-i", src]
         amap = "0:a:0"
         if K.get("audio") and "src" not in s:
-            inputs += ["-ss", f"{s['in']:.4f}", "-t", f"{d:.4f}", "-i", K["audio"]]
+            inputs += ["-ss", f"{s['in']:.4f}", "-t", f"{d + 0.2:.4f}", "-i", K["audio"]]
             amap = "1:a:0"
-        ff(inputs + ["-map", "0:v:0", "-map", amap, "-vf", vf, "-af", af, *venc,
-                     "-c:a", "pcm_s24le", "-ac", "2", "-t", f"{d:.4f}", part])
+        ff(inputs + ["-map", "0:v:0", "-map", amap, "-vf", vf, "-af", af, *venc, "-frames:v", str(n),
+                     "-c:a", "pcm_s24le", "-ac", "2", part])
         parts.append(part)
         print(f"\r{i + 1}/{len(segs)} segments", end="", flush=True)
     lst = os.path.join(a.work, "list.txt")
     open(lst, "w").write("".join(f"file '{os.path.abspath(p)}'\n" for p in parts))
     ff(["-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", a.out])
-    total = sum(s["out"] - s["in"] for s in segs)
-    print(f"\nwrote {a.out}: {len(segs)} segments, {total:.1f} s")
+    total = sum(max(1, round((s["out"] - s["in"]) * a.fps)) / a.fps for s in segs)
+    # count real video packets (the container's duration field drifts ~12 ms per piece with hardware encodes)
+    q = lambda *x: subprocess.run(["ffprobe", "-v", "error", *x, "-of", "csv=p=0", a.out], capture_output=True, text=True).stdout.strip()
+    vd = int(q("-count_packets", "-select_streams", "v:0", "-show_entries", "stream=nb_read_packets") or 0) / a.fps
+    ad = float(q("-select_streams", "a:0", "-show_entries", "stream=duration") or 0)
+    print(f"\nwrote {a.out}: {len(segs)} segments, {total:.2f} s (video {vd:.2f} / audio {ad:.2f})")
+    if abs(vd - ad) > 1.5 / a.fps:
+        sys.exit(f"A/V length mismatch {vd - ad:+.3f} s — do not use this render")
 
 
 if __name__ == "__main__":

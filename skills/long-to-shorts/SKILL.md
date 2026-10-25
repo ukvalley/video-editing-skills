@@ -48,3 +48,9 @@ Preview one clip at 540x960 first and get approval on the style, then batch the 
 - A 1080p source cropped to 9:16 is only 608 px wide → upscaled ~1.8×; prefer the 4K camera originals when they exist.
 - face_track holds framing when no face is found (screen shares, cutaways); check those spans on the sheet.
 - Never let the hook title or captions cover the face — check stills at the hook, mid-clip and payoff.
+
+## From an edited master (freelancer cut)
+Run `podcast-editor/scripts/classify_shots.py` and `detect_baked.py` first: pick framings from the shot runs and keep
+burned-in caption zones out of the crop (a split frame under a caption: test the divider on the top 600 px only).
+Skip candidates dominated by the editor's still infographics. Publishing: link every Short's Related video to the
+public full episode; for a daily release upload them Private with SEO done.

@@ -64,9 +64,12 @@ def main():
     ap.add_argument("file")
     ap.add_argument("--platform", default="youtube", choices=sorted(SPECS))
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--lufs", type=float, help="override the platform loudness target (e.g. -11 for the studio's talking-head reels)")
     a = ap.parse_args()
     require("ffmpeg")
-    spec = SPECS[a.platform]
+    spec = dict(SPECS[a.platform])
+    if a.lufs is not None:
+        spec["lufs"] = a.lufs
     info = media_info(a.file)
     results = []
 

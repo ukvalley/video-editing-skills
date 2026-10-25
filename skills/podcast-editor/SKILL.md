@@ -9,6 +9,11 @@ Read `video-studio` (router + shared rules/scripts) and `video-editor-pro/refere
 `V=~/.claude/skills/video-studio/scripts`, this skill's: `P=~/.claude/skills/podcast-editor/scripts`.
 Proven on a 16:9 two-person Hindi podcast recut (split-screen source, bad mics) that the client approved.
 
+## Source is someone else's edited master?
+Most client episodes arrive as a freelancer's finished cut (baked split-screen, their hook, burned-in captions, name tags,
+often 29.97 fps). Read `references/recut-edited-master.md` FIRST: shot map (`scripts/classify_shots.py`), burned-in text
+(`scripts/detect_baked.py`), 25 fps conform, framing rules, content edit, cold open, card timing, Shorts and publishing.
+
 ## Pipeline
 1. **Ingest.** `new-project.sh <show>-ep<N>`. `probe.py` every file; contact sheet. Note: cameras (count, which is wide/CU),
    baked-in name tags or split-screen (never widen to a layout with a freelancer's baked graphics), audio (lav per person? one mix?),
@@ -58,6 +63,12 @@ Tight but natural pacing, clean warm voices, close-ups that follow the talker, p
 graphics that explain lists and numbers, chapter cards, and no dead air. Not: constant zooms, SFX on every sentence, meme inserts.
 
 ## Gotchas
+- A/V drift: conform 29.97 sources with `fps=25` first and exact frame counts per piece (keep_render does; it also
+  refuses a render whose video and audio lengths differ). 27 s of drift over 14 min happened before this rule.
+- Content-edit mode: when the user finds the episode weak, keep only the clearest sentence per point (9 → 5 min, 30 → 14 min).
+- Full-screen cards: start at the first spoken item, end ~5 s after the last; > ~35 s of card hides faces too long.
+- Read the host intro: editors reuse a previous episode's intro (wrong topic) — keep only the greeting.
+- Render fast (parallel pieces, no taskpolicy) only when the user says the laptop is free; low priority otherwise.
 - Isolation chunks come back shifted by a few ms; `eleven.py isolate` re-aligns them — never just concatenate the returned mp3s.
 - Scribe hyphen stutters (`ता-ताकत`) are kept as the full word; captions still need hand-romanising for Hinglish.
 - Overlapping speech (both talking) can't be micro-cut; leave it or cut the whole exchange.

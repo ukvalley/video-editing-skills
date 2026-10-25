@@ -26,6 +26,20 @@ Create: `./new-project.sh <name>` (moves inbox/* to raw/). Fill notes.md brief (
 8. **Preview → approval → Master**: first `compose.py --preview` + normalize → `exports/vN_preview_<what>.mp4` and WAIT for the user to approve; then full render, `normalize_audio.sh work/mix.mov work/norm.mov --target -11 --tp -1.5` → `ffmpeg -c:v copy -c:a aac -b:a 320k -movflags +faststart exports/vN_<what>.mp4` → `qc.py --platform reels` must PASS.
 9. **Filler/stutter check** (re-transcribe silence-gated chunks), look at frames, then append to notes.md edit log.
 
+## Faster path with the shared scripts (proven on an English launch reel, approved at first preview)
+- Transcript: `video-studio/scripts/eleven.py stt` (Scribe, ~18 credits/min, exact verbatim word times in any language)
+  when words drive graphics; whisper-cpp per region stays the free option.
+- Cut: `edit/keeps.json` (one segment per kept phrase) → `keep_render.py`; punch-in crop on alternate segments from
+  `face_track.py --zoom 1.12` hides every jump cut. Retakes: keep the last clean take, find a stutter's clean onset in a
+  long Scribe word from the 10 ms RMS envelope (burst → silence → word).
+- Compose in ONE pass: decode the graded base as raw frames → draw word-anchored graphics with `motion-graphics/scripts/mg.py`
+  → encode with the ASS captions burned in → mix voice chain + SFX + ducked music. Template: `examples/compose_single_pass.py`
+  (scenes, SFX schedule, section zoom-punches, end card, `--stills` for checks).
+- **Handheld mic / mic at the mouth:** the mouth+mic sit around y 900–1050 in 1080x1920. Put graphics in a band centred
+  around y≈1400 (chest) and captions between them (position ≈0.615). Hide captions while a graphic shows the same words
+  (e.g. a list grid). Check stills: nothing may cover the mouth.
+- Master −11 LUFS with `--tp -2.2` (→ about −1.9 dBTP after AAC 320k); QC with `qc.py --platform reels --lufs -11`.
+
 ## Style defaults (user-approved)
 Full treatment unasked: premium grade, B-roll-style data graphics synced to words, transitions at section changes, loud layered SFX, crisp full-res graphics (never blurred plate), real logo end card (sheen + CTA tap), karaoke Roman captions. Product ads: client brand colours on a light canvas (e.g. a violet→blue gradient #683CEC→#185CE8), brand kit in `assets/brand/<client>/`, CTA matching the ad button ("Tap Learn More"). Add new reusable graphics to `toolkit/`, not the project.
 

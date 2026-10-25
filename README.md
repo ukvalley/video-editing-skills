@@ -75,7 +75,7 @@ Start every job with **`video-studio`** — it reads the request and routes it t
 | [`video-studio`](skills/video-studio) | Hub: picks the right skill, shared rules, shared scripts (ElevenLabs TTS / Scribe / voice isolation, cut-list renderer, face-follow 9:16 reframing, transcript tools) |
 | [`video-editor-pro`](skills/video-editor-pro) | The craft layer: cutting, pacing, transitions, sound design, beat sync, grading, captions, delivery specs and QC |
 | [`hinglish-talking-head-reel`](skills/hinglish-talking-head-reel) | Talking-head → 9:16 reel: retake removal, tight pauses, Roman Hinglish karaoke captions, word-synced graphics, SFX, grade |
-| [`podcast-editor`](skills/podcast-editor) | Podcast → YouTube episode: voice isolation, automatic filler/stutter/false-start cuts with a reviewable report, auto multicam, cold open, chapters |
+| [`podcast-editor`](skills/podcast-editor) | Podcast → YouTube episode: voice isolation, automatic filler/stutter/false-start cuts with a reviewable report, auto multicam, cold open, chapters. Recuts someone else's edited master too: shot map, burned-in caption detection, 29.97 → 25 conform, content edit |
 | [`long-to-shorts`](skills/long-to-shorts) | Long video → viral clips: transcript-scored candidates, Apple-Vision face-follow reframing, captions, hook titles |
 | [`motion-graphics`](skills/motion-graphics) | Logo stings, kinetic typography, animated data, lower-third packs, transparent overlay packs — code-rendered, crisp |
 | [`product-explainer-video`](skills/product-explainer-video) | 2–3 min SaaS explainers and 30 s ads (YouTube, Reels, TV) with ElevenLabs VO and word-synced scenes, multi-language |
