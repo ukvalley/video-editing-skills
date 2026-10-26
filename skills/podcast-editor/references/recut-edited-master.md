@@ -66,3 +66,6 @@ explained over stills), pick another moment.
 - A Short's "Related video" picker lists only PUBLIC videos: make the full episode public first, then link every Short to it.
 - If the user wants to release one Short per day, upload them all as Private with SEO done, and they publish daily.
 - Never click Publish/Post without the user's explicit OK in chat.
+- No project files at hand (drive unplugged)? `video-studio/scripts/studio_caption_sheet.js` reads each uploaded Short's
+  burned-in captions in Studio so titles/descriptions still match what's said. Match the title to the on-video hook.
+- Re-read the content list after saving: Shorts the user scheduled meanwhile show "Scheduled"; leave those as they are.

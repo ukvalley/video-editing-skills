@@ -60,6 +60,7 @@ A job can chain skills: podcast → `podcast-editor` → `long-to-shorts` → `t
 | `transcript_view.py words.json` | `[mm:ss–mm:ss] S0: sentence` lines — read this to pick clips, chapters, hooks, B-roll moments |
 | `keep_render.py keeps.json out.mov --size WxH` | Render a cut list (in/out, per-segment crop/zoom/src, replacement audio) with click-free micro-fades |
 | `face_track.py src.mp4 crops.json --aspect 9:16 --range a b --sheet s.jpg` | Apple-Vision face-follow reframing; locked "camera operator" framing, not jitter |
+| `studio_caption_sheet.js` (browser) | Read burned-in captions of a video inside YouTube Studio as one image sheet (SEO without project files) |
 | `remap_words.py keeps.json words.json out.json` | Source-time words → output-time words (for captions/graphics after a cut) |
 
 Voices (ElevenLabs): Ruhaan `siw1N9V8LmYeEWKyWBxv` (default, explainers), Prem `05QRrdNgiglhuYOaTQvw` (courses, speed 1.05),
@@ -76,5 +77,13 @@ Free local transcription: `whisper-cli -m ~/.cache/whisper-cpp/ggml-medium.bin -
   position and confirm with a screenshot.
 - Shorts: "Related video" only lists PUBLIC videos, so publish the full episode first, then link each Short to it.
   Daily release = upload all as Private with SEO done.
+- **SEO for Shorts already sitting in Studio (no project files at hand):** read what each one says from its burned-in
+  captions with `scripts/studio_caption_sheet.js` (paste into the page, `capSheet(0)`, page through `capPage(n)`), then
+  write the title/description from the actual lines. Title must agree with the on-video hook text (a "5 values" hook
+  can't get a "4 values" title). Per Short: title, description (2-4 lines + full-episode link + credentials + 5-6
+  hashtags), ~14 tags, language, not-for-kids, AI disclosure, visibility; Save; then re-check the content list.
+- After a batch, re-read the list: a Short can show **Scheduled** ("private until <date>, then public") if the user
+  scheduled it meanwhile — report it, don't override it. A full-episode link in descriptions only works once that
+  episode is Public (Private links show "video unavailable").
 - Posting kit per video in `edit/posting_kit.md` (Instagram caption + hashtags + alt text + comment-to-DM keyword,
   YouTube title/description/tags, LinkedIn text). Links in Shorts descriptions aren't clickable: pin a comment.
